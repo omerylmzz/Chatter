@@ -24,25 +24,17 @@ Clone this repository
 git clone https://github.com/omerylmzz/Chatter.git
 ```
 
-Go to project directory
+Install the required packages
 
 ```bash
-cd chatapp
+npm init
 ```
-
-Install the required packages
 
 ```bash
 npm install
 ```
     
 ## Run on your computer 
-
-Go to project directory
-
-```bash
-cd chatapp
-```
 
 Start the server
 
