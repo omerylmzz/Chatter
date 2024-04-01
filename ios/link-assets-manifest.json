@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/arial-bold.TTF",
+      "sha1": "6f2d4b4eccc9969e95790b5d684c437b517bb43d"
+    },
+    {
+      "path": "assets/fonts/arial-regular.TTF",
+      "sha1": "a45b2cc53ff08e1f615c549f3dcef4b60cb342f6"
+    },
+    {
+      "path": "assets/fonts/bebas.otf",
+      "sha1": "3600a30c26396412d0b7f964822fde22fd6598d3"
+    },
+    {
+      "path": "assets/fonts/budidaya.otf",
+      "sha1": "1832179f1ceabeaf141596985c6ef77e49aa2df0"
+    },
+    {
+      "path": "assets/fonts/coolvetica.otf",
+      "sha1": "e0a13ed40b2b03e08ec645ff287c33338ea9f720"
+    }
+  ]
+}
