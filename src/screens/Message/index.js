@@ -51,7 +51,7 @@ const Message = ({navigation, route}) => {
   const handleAddNewMessage = () => {
     const timeData =
       {
-        hour: new Date().getHours() < 10 ? `0${new Date().getHours()}` : new Date().getHours(),
+        hour: new Date().getHours() + 3 < 10 ? `0${new Date().getHours()}` : new Date().getHours() + 3,
         minute: new Date().getMinutes() < 10 ? `0${new Date().getMinutes()}` : new Date().getMinutes()
       };
 

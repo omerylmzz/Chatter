@@ -1,7 +1,6 @@
 import React from "react";
-import { View, StyleSheet, FlatList, useWindowDimensions, Image, Text, Dimensions } from "react-native";
-import Colors, { darkColors } from "../styles/Colors";
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { View, StyleSheet, useWindowDimensions, Image, Text, Dimensions } from "react-native";
+import { darkColors } from "../styles/Colors";
 
 const {width: SCREEN_WIDTH} = Dimensions.get("window");
 const Onboarding = ({image, title, description}) => {

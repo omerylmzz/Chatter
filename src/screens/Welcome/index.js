@@ -8,8 +8,6 @@ import style from "./styles";
 import MainButton from "../../components/buttons/MainButton";
 
 
-
-
 const Welcome = ({navigation}) => {
 
   const styles = style();
@@ -24,17 +22,17 @@ const Welcome = ({navigation}) => {
   useEffect(() => {
     checkSaveUser();
     if (currentIndex < data.length - 1){
-      setBtnText("Next")
+      setBtnText("Next");
     }
     else {
-      setBtnText("Get Started")
+      setBtnText("Get Started");
     }
   }, [currentIndex]);
 
   const checkSaveUser = () => {
     auth().onAuthStateChanged(user => {
       if (user){
-        navigation.navigate("BottomNavigation");
+        navigation.replace("BottomNavigation");
         console.log(user.email);
       }
     })
@@ -53,7 +51,7 @@ const Welcome = ({navigation}) => {
     }
     else
     {
-      navigation.navigate("Login")
+      navigation.replace("Login")
     }
   }
 

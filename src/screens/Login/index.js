@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   View,
   Text,
@@ -26,6 +26,7 @@ const Login = ({navigation}) => {
 
 
 
+
   const checkUser = (email, password) => {
     setLoading(true);
     setTimeout(() => {
@@ -49,7 +50,7 @@ const Login = ({navigation}) => {
 
   return(
     <View style={styles.container}>
-      <StatusBar backgroundColor={darkColors.background} barStyle={"light-content"}/>
+      <StatusBar backgroundColor={darkColors.background} barStyle="light-content"/>
       <View style={styles.header}>
         <Text style={styles.title}>
           Welcome To Chatter
@@ -105,7 +106,7 @@ const Login = ({navigation}) => {
               </View>
               <View style={{alignSelf: "center", position: "absolute", right: 10}}>
                 <Pressable onPress={() => setSecurePassword(a => !a)}>
-                  <Icon name={securePassword ? "eye" : "eye-off"} color={darkColors.secondary} size={24}/>
+                  <Icon name={securePassword ? "eye" : "eye-off"} color={darkColors.ripple} size={24}/>
                 </Pressable>
               </View>
             </Pressable>
@@ -118,7 +119,7 @@ const Login = ({navigation}) => {
           </View>
         )}
       </Formik>
-      <View style={{position: "absolute", bottom:0, width: "100%"}}>
+      <View style={{position: "absolute", bottom: 0, width: "100%"}}>
         <View style={{width: "100%", height: 0.5, backgroundColor: darkColors.secondary}}/>
         <View style={{flexDirection: "row", alignSelf: "center"}}>
           <Text style={styles.text}>

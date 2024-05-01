@@ -1,9 +1,8 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import Colors from "../styles/Colors";
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native";
+import { darkColors } from "../styles/Colors";
 
-
+const {width: SCREEN_WIDTH, height: SCREEN_HEIGHT} = Dimensions.get("window");
 
 const RoomItem = ({title, description, buttonText, pressFunction}) => {
   return(
@@ -29,44 +28,44 @@ const RoomItem = ({title, description, buttonText, pressFunction}) => {
 
 const darkStyles = StyleSheet.create({
   container:{
-    backgroundColor:Colors.secondaryBlack,
-    width:'98%',
-    height:hp('11%'),
-    marginVertical:3,
+    flexDirection: "row",
+    width: "98%",
+    height: SCREEN_HEIGHT * 0.11,
+    justifyContent:'space-between',
     alignSelf:'center',
     alignItems:'center',
-    borderRadius:10,
-    justifyContent:'space-between',
-    flexDirection:'row',
+    backgroundColor: darkColors.secondary,
+    marginVertical: 3,
+    borderRadius: 10,
   },
   textBox:{
-    paddingHorizontal:10,
+    paddingHorizontal: 10,
   },
   description:{
-    color:Colors.primaryGrey,
-    fontSize:14,
-    marginBottom:5
+    color: darkColors.description,
+    fontSize: 14,
+    marginBottom: 5
   },
   title:{
-    color:'white',
     fontSize:24,
-    fontFamily:'coolvetica',
+    fontFamily: "coolvetica",
+    color: darkColors.white,
     marginBottom:5
   },
   button:{
-    backgroundColor:Colors.primaryPurple,
-    justifyContent:'center',
-    alignItems:'center',
-    borderRadius:5,
-    paddingVertical:2,
-    paddingHorizontal:5
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: darkColors.lightPurple,
+    borderRadius: 5,
+    paddingVertical: 2,
+    paddingHorizontal: 5
   },
   btnText:{
-    color:'white',
-    fontFamily:'bebas',
-    fontSize:16,
-    paddingVertical:5,
-    paddingHorizontal:20
+    fontFamily: "bebas",
+    fontSize: 16,
+    color: "white",
+    paddingVertical: 5,
+    paddingHorizontal: 20
   }
 })
 

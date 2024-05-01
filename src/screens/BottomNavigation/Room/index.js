@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, Modal, Pressable, Text, TextInput, View } from "react-native";
+import { FlatList, Modal, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { socket } from "../../../utils";
 import { darkStyles } from "./styles";
 import RoomHeader from "../../../components/headers/RoomHeader";
 import RoomItem from "../../../components/items/RoomItem";
-import Colors from "../../../components/styles/Colors";
+import { darkColors } from "../../../components/styles/Colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 
@@ -30,8 +30,8 @@ const Room = ({navigation}) => {
     if (password !== "" && password === groupPassword)
     {
       navigation.navigate("Message", {
-        groupId:groupId,
-        groupName:groupName
+        groupId: groupId,
+        groupName: groupName
       })
       setPassword("");
       setVisibleModal(false);
@@ -68,15 +68,15 @@ const Room = ({navigation}) => {
                 onChangeText={setPassword}
                 style={darkStyles.modalInput}
                 placeholder='Password'
-                placeholderTextColor={Colors.primaryGrey}
+                placeholderTextColor={darkColors.placeholder}
               />
             </View>
             <View style={{width:'100%'}}>
-              <Pressable style={darkStyles.modalButton} onPress={() => handleNavigateToMessage()}>
+              <TouchableOpacity style={darkStyles.modalButton} onPress={() => handleNavigateToMessage()} activeOpacity={0.5}>
                 <Text style={darkStyles.modalButtonText}>
                   CONTINUE
                 </Text>
-              </Pressable>
+              </TouchableOpacity>
             </View>
             <View style={{position:'absolute', top:10, right:10}}>
               <Pressable style={darkStyles.modalCloseButton} onPress={() => setVisibleModal(false)}>

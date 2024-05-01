@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Pressable, StatusBar, Text, TextInput, View } from "react-native";
-import style, { darkStyles } from "./styles";
-import Colors, { darkColors } from "../../../components/styles/Colors";
+import style from "./styles";
+import { darkColors } from "../../../components/styles/Colors";
 import { socket } from "../../../utils";
 import database from "@react-native-firebase/database";
 import auth from "@react-native-firebase/auth";
@@ -9,7 +9,6 @@ import HomeHeader from "../../../components/headers/HomeHeader";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Home = () => {
-
 
   const styles = style();
 
@@ -21,7 +20,7 @@ const Home = () => {
   const [groupPassword, setGroupPassword] = useState();
 
   useEffect(() => {
-    selfInformation()
+    selfInformation();
   }, []);
 
   const sendGroupName = () => {
@@ -34,11 +33,11 @@ const Home = () => {
         createrName: name,
         createrSurname: surname
       })
-      setGroupName("")
-      setGroupPassword("")
+      setGroupName("");
+      setGroupPassword("");
     }
     else {
-      console.log("Boş")
+      console.log("Boş");
     }
 
   }
@@ -48,12 +47,12 @@ const Home = () => {
 
     database().ref("Users").child(currentUserId + "/NAME").on("value", snapshot => {
       const name = snapshot.val();
-      setName(name)
+      setName(name);
     })
 
     database().ref("Users").child(currentUserId + "/SURNAME").on("value", snapshot => {
       const surname = snapshot.val();
-      setSurname(surname)
+      setSurname(surname);
     })
 
 
@@ -62,7 +61,7 @@ const Home = () => {
 
   return(
     <View style={styles.container}>
-      <StatusBar backgroundColor={styles.background} barStyle="light-content"/>
+      <StatusBar backgroundColor={darkColors.secondary} barStyle="light-content"/>
       <HomeHeader/>
       <View>
         <Text style={styles.title}>
@@ -77,7 +76,7 @@ const Home = () => {
             value={groupName}
             onChangeText={setGroupName}
             placeholder='Enter the room name'
-            placeholderTextColor={Colors.primaryGrey}
+            placeholderTextColor={darkColors.placeholder}
           />
         </View>
         <View style={{flexDirection:'row', alignItems:'center', marginBottom:10}}>
@@ -93,7 +92,7 @@ const Home = () => {
         <View>
           <Pressable style={styles.button} onPress={() => sendGroupName()}>
             <Text style={styles.buttonText}>
-              CREATE
+              Create
             </Text>
           </Pressable>
         </View>

@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Pressable, Text } from "react-native";
-import Colors, { darkColors } from "../styles/Colors";
+import { darkColors } from "../styles/Colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const RoomHeader = ({pressFunction, groupName}) => {
+const RoomHeader = () => {
   return(
     <View style={darkStyles.container}>
       <View>
@@ -25,12 +25,12 @@ const RoomHeader = ({pressFunction, groupName}) => {
 
 const darkStyles = StyleSheet.create({
   container:{
-    backgroundColor:Colors.secondaryBlack,
+    flexDirection: "row",
     width: "100%",
     height: 60,
-    flexDirection: "row",
-    alignItems: "center",
+    backgroundColor: darkColors.secondary,
     justifyContent: "space-between",
+    alignItems: "center",
     paddingHorizontal: 10
   },
   title:{

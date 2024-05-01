@@ -1,13 +1,12 @@
 import React from "react";
-import { View, StyleSheet, Pressable, Text } from "react-native";
-import Colors from "../styles/Colors";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { View, StyleSheet, Text } from "react-native";
+import { darkColors } from "../styles/Colors";
 
-const HomeHeader = ({pressFunction, groupName}) => {
+const HomeHeader = () => {
   return(
     <View style={darkStyles.container}>
       <Text style={darkStyles.title}>
-        chetter
+        chatter
       </Text>
     </View>
   )
@@ -15,17 +14,17 @@ const HomeHeader = ({pressFunction, groupName}) => {
 
 const darkStyles = StyleSheet.create({
   container:{
-    backgroundColor:Colors.secondaryBlack,
-    width:'100%',
-    height:60,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center',
+    flexDirection: "row",
+    width: "100%",
+    height: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: darkColors.secondary,
   },
   title:{
-    color:'white',
-    fontFamily:'budidaya',
-    fontSize:32
+    fontFamily: 'budidaya',
+    fontSize: 32,
+    color: darkColors.white,
   }
 })
 
