@@ -1,8 +1,8 @@
 # Chatter
 
-A simple chat application using Socket.io in React-native. The application authenticates users with Firebase Authentication and stores users with Firebase Realtime Database. Also used Node.js and Express on the server side. This application has been developed and tested only in the Android environment.
+![Image](https://github.com/user-attachments/assets/f607fa3a-7db7-48ff-a9cd-f13abd567c86)
 
-![Logo](https://i.hizliresim.com/ij13oo8.jpg)
+A simple chat application using Socket.io in React-native. The application authenticates users with Firebase Authentication and stores users with Firebase Realtime Database. Also used Node.js and Express on the server side. This application has been developed and tested only in the Android environment.
 
 ## Used technologies 
 
